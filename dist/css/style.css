@@ -6,16 +6,26 @@
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-size: 0.9375rem;
   font-family: "Poppins", sans-serif;
-  background-color: var(--veryLightGray);
+  background-color: #fafafa;
   min-height: 100vh;
-  padding-top: 5.3125rem;
+  padding-top: 3rem;
+}
+
+@media (max-width: 50em) {
+  body {
+    padding: 1.875rem;
+  }
 }
 
 main {
-  max-width: 90em;
+  max-width: 85em;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -24,6 +34,7 @@ main {
 main h1 {
   font-size: 2.5rem;
   font-weight: 200;
+  padding-bottom: 1rem;
   color: #4c4e61;
 }
 
@@ -33,13 +44,75 @@ main span {
 }
 
 main p {
-  max-width: calc(90em / 2);
+  max-width: calc(90em / 2.5);
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 2.5rem;
   color: #a3a5ae;
 }
 
+main section article:nth-child(1) {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+main section article:nth-child(2) {
+  border-top-color: #ea5353;
+}
+
+main section article:nth-child(3) {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  border-top-color: #549ef2;
+}
+
+main section article:nth-child(4) {
+  border-top-color: #fcaf4a;
+}
+
+@media (max-width: 50em) {
+  main section article:nth-child(1) {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  main section article:nth-child(3) {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
 main article {
-  width: 33.33%;
+  width: 30%;
+  height: 17em;
+  display: inline-block;
+  background: #fff;
+  position: relative;
+  text-align: left;
+  padding: 0.9375rem;
+  padding-right: 1.875rem;
+  margin: 0.9375rem;
+  border-top: 5px solid #45d3d3;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 10px rgba(76, 78, 97, 0.2);
+          box-shadow: 5px 5px 10px rgba(76, 78, 97, 0.2);
+}
+
+@media (max-width: 50em) {
+  main article {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+main article h2 {
+  color: #4c4e61;
+  margin-bottom: 0.3125rem;
+}
+
+main article img {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
